@@ -46,29 +46,38 @@
       </section>
 
       <section class="section">
-        <h2>Lock</h2>
-        <p>Use Lock to apply a file-open password to supported workbooks. The processed workbook remains at the expected output location after successful processing.</p>
+        <h2>Workflow</h2>
+        <p>Create or select a client, save or enter the authorized workbook password, add supported workbook files, review the planned action for each file, then choose Process Files.</p>
+        <p>Excelerator Password inspects each supported workbook before processing. Unlocked modern workbooks are planned for Lock, locked modern workbooks are planned for Unlock, and legacy <code>.xls</code> workbooks follow the modernization path before processing.</p>
       </section>
 
       <section class="section">
-        <h2>Unlock</h2>
-        <p>Use Unlock to remove a known file-open password from supported workbooks. Incorrect passwords fail closed and do not replace the original file.</p>
+        <h2>Batch Processing</h2>
+        <p>You can add multiple supported workbook files and process mixed Lock and Unlock actions in the same batch. Add individual workbook files only.</p>
+      </section>
+
+      <section class="section">
+        <h2>Lock and Unlock</h2>
+        <p>Lock applies a file-open password to an unlocked supported workbook. Unlock removes a known file-open password from a protected supported workbook. The current authorized password is required; Excelerator Password does not recover, guess, crack, or bypass forgotten passwords.</p>
+        <p>Version 2.0 lock and unlock processing does not require opening Microsoft Excel.</p>
       </section>
 
       <section class="section">
         <h2>Dock Drop</h2>
-        <p>Supported workbooks can be dropped on the Dock icon for quick processing. Dock Drop uses the app's current saved settings and selected client context.</p>
+        <p>Supported workbooks can be dropped on the Dock icon for quick processing. Dock Drop uses the remembered Dock Drop client configured in the app. Automatic repeat processing requires that configured client and an available saved password.</p>
       </section>
 
       <section class="section">
         <h2>Legacy .xls Modernization</h2>
         <p>The original <code>.xls</code> file is preserved and Excelerator Password creates a modernized <code>.xlsx</code> copy for processing.</p>
+        <p>Legacy modernization preserves supported workbook data where possible, but may not preserve every advanced formatting, layout, or workbook feature.</p>
         <p>If macOS requires authorization for the new <code>.xlsx</code>, a normal Save dialog may appear.</p>
       </section>
 
       <section class="section">
         <h2>Passwords and Keychain</h2>
         <p>Client profiles can store saved workbook passwords. Saved passwords use macOS Keychain.</p>
+        <p>If macOS Keychain access fails, Excelerator Password may be unable to save, retrieve, or remove a stored client password and should surface an error or attention state where supported.</p>
       </section>
 
       <section class="section">
@@ -79,12 +88,22 @@
 
       <section class="section">
         <h2>Wrong Password Behavior</h2>
-        <p>If a password is rejected, verify the selected client profile and workbook password. The app should not replace the original workbook after an incorrect password.</p>
+        <p>If a password is rejected, verify the selected client profile and workbook password. Failed files can be retried after correcting the password or file issue. The app should not replace the original modern workbook after an incorrect password.</p>
       </section>
 
       <section class="section">
         <h2>Malformed or Unsupported Workbooks</h2>
         <p>If a workbook is malformed, damaged, or not a supported Excel workbook type, processing fails and the original file should remain unchanged.</p>
+      </section>
+
+      <section class="section">
+        <h2>System Requirement</h2>
+        <p>Excelerator Password 2.0.0 requires macOS 13.0 or later.</p>
+      </section>
+
+      <section class="section">
+        <h2>Appearance</h2>
+        <p>Excelerator Password supports Light and Dark Mode.</p>
       </section>
 
       <section class="section">
@@ -100,7 +119,7 @@
 
       <section class="section">
         <h2>User Guide and Quick Start</h2>
-        <p>Version 1.3.0 includes bundled User Guide and Quick Start documentation in the app bundle. Open them from the Help menu inside Excelerator Password.</p>
+        <p>Version 2.0.0 includes bundled User Guide and Quick Start documentation in the app bundle. Open them from the Help menu inside Excelerator Password.</p>
       </section>
 
       <section class="callout">
